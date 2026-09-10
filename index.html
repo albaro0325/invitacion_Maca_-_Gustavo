@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#062b4b">
+  <title>Macarena & Gustavo | Nuestra boda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<div id="intro" class="intro">
+  <div class="intro-photo"></div><div class="intro-shade"></div>
+  <div class="intro-content">
+    <div class="intro-kicker">TENEMOS ALGO MUY ESPECIAL<br>PARA COMPARTIR CON VOS</div>
+    <h1>Macarena <span>&</span> Gustavo</h1>
+    <p>Deslizá para abrir nuestra invitación</p>
+    <button id="openInvitation" class="open-circle">⌄</button>
+  </div>
+</div>
+
+<main class="page">
+  <button id="musicBtn" class="music-btn" aria-label="Reproducir música">♫</button>
+
+  <section class="cover reveal">
+    <div class="cover-photo"></div><div class="cover-shade"></div>
+    <div class="cover-content">
+      <div class="tiny">14 · NOVIEMBRE · 2026</div>
+      <div class="save"><br><i></i></div>
+      <div class="cover-names">Macarena <span>&</span> Gustavo</div>
+      <div class="cover-line"></div>
+      <div class="cover-bottom"><br><b></b></div>
+    </div>
+  </section>
+
+  <section class="intro-message section cream reveal">
+    <div class="ornament">✦</div>
+    <div class="eyebrow">14 DE NOVIEMBRE DE 2026</div>
+    <h2>¡Nos casamos!</h2>
+    <p>Hay momentos que soñamos, historias que escribimos y personas con las que queremos compartirlos.</p>
+    <p class="script">Queremos que seas parte de este día tan especial.</p>
+  </section>
+
+  <section class="countdown section blue reveal">
+    <div class="eyebrow">FALTA MUY POQUITO</div>
+    <h2>La cuenta regresiva</h2>
+    <div id="countdown" class="counter">
+      <div><strong>--</strong><span>DÍAS</span></div>
+      <div><strong>--</strong><span>HORAS</span></div>
+      <div><strong>--</strong><span>MINUTOS</span></div>
+      <div><strong>--</strong><span>SEGUNDOS</span></div>
+    </div>
+  </section>
+
+  <section class="event section cream reveal">
+    <div class="event-card">
+      <div class="event-icon">♧</div>
+      <div class="eyebrow">CEREMONIA</div>
+      <h2>Parroquia<br><i>San Ramón</i></h2>
+      <p>14 de noviembre · 22:00 hs</p>
+      <a id="churchMap" class="pill dark" target="_blank" rel="noopener">CÓMO LLEGAR</a>
+    </div>
+  </section>
+
+  <section class="event section blue reveal">
+    <div class="event-card">
+      <div class="event-icon">♢</div>
+      <div class="eyebrow">FIESTA</div>
+      <h2>Malvinas Argentinas</h2>
+      <p>Polideportivo Comunicaciones</p>
+      <a id="hallMap" class="pill light" target="_blank" rel="noopener">CÓMO LLEGAR</a>
+    </div>
+  </section>
+
+  <section class="photo-feature reveal">
+    <img src="img/foto-anillo.jpg" alt="Macarena y Gustavo">
+    <div class="photo-caption">
+      <div class="eyebrow">Para nosotros es...</div>
+      <h2>Una historia que<br><i>recién comienza.</i></h2>
+    </div>
+  </section>
+
+  <section class="music section cream reveal">
+    <div class="music-note">♫</div>
+    <div class="eyebrow">MÚSICA</div>
+    <h2>Una canción<br><i>para este momento</i></h2>
+    <p>Hay canciones que tienen un significado especial para nosotros.</p>
+    <div class="song">
+      <span class="disc">♪</span>
+      <div><b>Perfect</b><small>Ed Sheeran</small></div>
+      <button id="playSong">▶</button>
+    </div>
+    <p class="hint">Colocá <b>musica.mp3</b> dentro de la carpeta <b>audio</b> para reproducirla.</p>
+  </section>
+
+  <section class="details section blue reveal">
+    <div class="eyebrow">TODO LO QUE TENÉS QUE SABER</div>
+    <h2>Acá te contamos<br><i>todos los detalles...</i></h2>
+
+    <details open><summary>Dress Code <span>＋</span></summary><p>Elegante / Cóctel.</p></details>
+    <details><summary>Regalo <span>＋</span></summary><p>Tu presencia es nuestro mejor regalo. Si querés obsequiarnos algo, podés hacerlo mediante transferencia:</p><p class="alias" id="aliasText">albaro.daniel.gomez</p><button class="copy" data-copy="alias">COPIAR ALIAS</button></details>
+    <details><summary>Niños <span>＋</span></summary><p>El evento esta pensado para adultos <b></b>.</p></details>
+    <details><summary>Valor de tarjeta <span>＋</span></summary><p>Este dato queda editable en <b>js/datos.js</b>.</p></details>
+  </section>
+
+  <section class="instagram section cream reveal">
+    <div class="insta">◎</div>
+    <div class="eyebrow">NUESTRO INSTAGRAM WALL</div>
+    <h2 id="instagramHandle">@TU_INSTAGRAM</h2>
+    <p>Compartí tus fotos de este día tan especial y etiquetanos.</p>
+    <a id="instagramLink" class="pill dark" target="_blank" rel="noopener">VER INSTAGRAM</a>
+  </section>
+
+  <section class="rsvp section cream reveal">
+    <div class="envelope">✉</div>
+    <div class="eyebrow">¿VENÍS?</div>
+    <h2>Confirmá tu<br><i>asistencia</i></h2>
+    <p>Nos ayudaría muchísimo que confirmes tu presencia.</p>
+    <a id="whatsapp" class="pill dark" target="_blank" rel="noopener">CONFIRMAR POR WHATSAPP</a>
+    <small>WhatsApp: <span id="phoneText"></span></small>
+  </section>
+
+  <footer>
+    <div>Macarena <span>&</span> Gustavo</div>
+    <small>14 · 11 · 2026</small>
+  </footer>
+</main>
+
+<audio id="audio" loop preload="metadata">
+  <source src="audio/musica.mp3" type="audio/mpeg">
+</audio>
+<script src="js/datos.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
