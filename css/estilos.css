@@ -1,5 +1,5 @@
 *{box-sizing:border-box}
-:root{--blue:#062b4b;--cream:#f4f1e9;--ink:#17344c;--gold:#b9a16b}
+:root{--blue:#d83568;--cream:#f4f1e9;--ink:#17344c;--gold:#b9a16b}
 html,body{margin:0;padding:0;background:#101820;color:var(--ink);font-family:Montserrat,Arial,sans-serif}
 body{overflow-x:hidden}
 .page{width:min(100%,480px);margin:auto;background:var(--cream);box-shadow:0 0 45px #0005}
@@ -25,7 +25,7 @@ p{font-size:12px;line-height:1.8;max-width:330px}
 .intro.hide{opacity:0;visibility:hidden;pointer-events:none;transition:opacity 1s,visibility 1s}
 .cover{height:100svh;min-height:680px;position:relative;overflow:hidden;color:white;padding:0}
 .cover-photo{position:absolute;inset:0;background:url("../img/foto-portada.jpg") center 30%/cover no-repeat;animation:slowZoom 12s ease-out both}
-.cover-shade{position:absolute;inset:0;background:linear-gradient(180deg,#031b2b55 0%,#031b2b11 35%,#031b2bdd 100%)}
+.cover-shade{position:absolute;inset:0;background:linear-gradient(180deg,#031b2b55 0%,#68193111 35%,#031b2bdd 100%)}
 .cover-content{position:relative;height:100%;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:55px 25px 45px;text-align:center}
 .tiny{font-size:9px;letter-spacing:4px}
 .save{font-size:43px;line-height:.65;font-style:italic;margin-top:90px}
