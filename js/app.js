@@ -1,7 +1,7 @@
 const $ = s => document.querySelector(s);
 const audio = $("#audio");
 const musicBtn = $("#musicBtn");
-
+/*
 function iniciar() {
   const d = window.DATOS || DATOS;
   $("#aliasText").textContent = d.alias;
@@ -11,6 +11,30 @@ function iniciar() {
   $("#whatsapp").href = `https://wa.me/${d.whatsapp}?text=${encodeURIComponent(
     `Hola Macarena y Gustavo! Quiero confirmar mi asistencia a su boda del 14 de noviembre de 2026.`
   )}`;
+*/
+
+function iniciar() {
+  const d = window.DATOS || DATOS;
+  $("#aliasText").textContent = d.alias;
+  $("#phoneText").textContent = "+" + d.whatsapp;
+  $("#instagramHandle").textContent = d.instagramTexto || "@TU_INSTAGRAM";
+  $("#instagramLink").href = d.instagram || "#";
+
+  // 1. Obtener la cantidad de invitados desde la URL (?invitados=N)
+  const params = new URLSearchParams(window.location.search);
+  const cant = parseInt(params.get('invitados')) || 1;
+
+  // 2. Construir el mensaje según la cantidad
+  let mensaje = "";
+  if (cant === 1) {
+    mensaje = "¡Hola Macarena y Gustavo! Quiero confirmar mi asistencia a su boda del 14 de noviembre de 2026.";
+  } else {
+    mensaje = `¡Hola Macarena y Gustavo! Queremos confirmar nuestra asistencia a su boda del 14 de noviembre de 2026. Asistiremos ${cant} personas.`;
+  }
+
+  // 3. Asignar el enlace dinámico al botón
+  $("#whatsapp").href = `https://wa.me/${d.whatsapp}?text=${encodeURIComponent(mensaje)}`;
+}
 
   $("#churchMap").href = "https://maps.app.goo.gl/5aPu3sxPWhLRTcNP9";
   $("#hallMap").href = "https://maps.app.goo.gl/KAYERztRD7hR8Lzx9";
